@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1111,
+        "title": "Pijama lunares",
+        "description": "Pijama para perritos medianos, muy abrigado y suave",
+        "price":1200,
+        "stock":5,
+        "Image":"./assets/img/ropa1.jpeg"
+    },
+    {
+        "id": 2222,
+        "title": "Capa papa noel",
+        "description": "Disfraz de navidad para gatos o perros pequeños",
+        "price":1500,
+        "stock":8,
+        "Image":"./assets/img/ropa2.jpeg"
+    },
+    {
+        "id": 3333,
+        "title": "Capa arbol",
+        "description": "Disfraz de navidad para gatos o perros pequeños",
+        "price":1500,
+        "stock":15,
+        "Image":"./assets/img/ropa3.jpg"
+    },
+    {
+        "id": 4444,
+        "title": "Traje dragon chino",
+        "description": "Disfraz de dragon, no es para un uso muy prolongado dado que puede resultar incomodo para el animal",
+        "price":2000,
+        "stock":6,
+        "Image":"./assets/img/ropa4.jpg"
+    },
+    {
+        "id": 5555,
+        "title": "Pijama dinosaurio",
+        "description": "Pijama para gatos super abrigado y tierno",
+        "price":1200,
+        "stock":9,
+        "Image":"./assets/img/ropa5.jpeg"
+    },
+    {
+        "id": 6666,
+        "title": "Gorrito reno",
+        "description": "Gorrito reno para gatos, material suave y comodo",
+        "price":700,
+        "stock":10,
+        "Image":"./assets/img/ropa6.jpeg"
+    }
+]

@@ -1,0 +1,20 @@
+  {PostData.map((postDetail)=>{
+          return (
+            <div>
+            <ItemListContainer title={postDetail.title} 
+            image={postDetail.Image} 
+            description={postDetail.description} 
+            price={postDetail.price}/>
+            </div>
+          )
+      })}
+
+
+
+      <div>
+        <h3>{title}</h3>
+        <img src={image} alt="img" />
+        <p>{description}</p>
+      </div>
+      <h4>${price}</h4>
+      <button>Agregar al carrito</button>

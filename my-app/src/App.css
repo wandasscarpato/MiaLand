@@ -1,56 +1,125 @@
 *{
-  text-decoration: none;
-  list-style: none;
   padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
 }
-
-.navbar-material .nav-wrapper .brand-logo img {
-    padding: 10px;
-    height: 64px;
+html{
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
 }
-
-.navbar-material .nav-wrapper .brand-logo.text {
-  padding-left: 64px;
+.Header{
+  background-color: #243444;
+  text-align: center;
 }
-
-.navbar-material{
-  background-color: black;
+.Header img{
+  width: 200px;
+  padding: 1rem;
 }
-
-.dropdown-content a{
-  color: white !important;
-  background-color: black;
-}
-
-.Site {
+.NavBar{
+  background-color: #243444;
+  padding-bottom: 1rem;
+  line-height: 45px;
+  height: 75px;
   display: flex;
-  min-height: 75vh;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+.NavBar ul{
+  display: flex;
+}
+.NavBar ul li{
+  padding: 1rem;
+}
+.NavBar ul li a{
+  color: white;
+}
+/*----------------------FIN HEADER-------------------*/
+.relleno{
+  height: calc(100vh - 200px - 198px);
+}
+/*----------------------FIN SECTION-------------------*/
+footer{
+  color: white;
+  /*height: 198px;*/}
+footer div:first-child{
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #243444;
+  padding-top: 1rem;
+}
+footer div ul{
+  display: flex;
+  justify-content: center;
+}
+footer div ul li a i{
+  font-size: 30px;
+  padding: 2rem;
+  color:white;
+}
+footer div div h3{
+  font-size: 2rem;
+}
+.footerDerechos{
+  background-color: #1d2e3f;
+  padding: 1rem;
+  text-align: center;
+}
+i.fas.fa-cart-plus{
+  height: 100%;
+}
+/*----------------------FIN FOOTER-------------------*/
+/*----------------------Card Productos-------------------*/
+.productos{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+/*----------------------fin Card Productos-------------------*/
+
+/*.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: paleturquoise;
+  min-height: 100vh;
+  display: flex;
   flex-direction: column;
-  padding: 30px;
-  /*text-align: center;*/
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(126, 25, 221);
 }
 
-.badge {
-  padding-left: 9px;
-  padding-right: 9px;
-  -webkit-border-radius: 9px;
-  -moz-border-radius: 9px;
-  border-radius: 9px;
-  margin-top: 5px;
+.App-link {
+  color: #ca61fb;
 }
 
-.label-warning[href],
-.badge-warning[href] {
-  background-color: #c67605;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
-
-#lblCartCount {
-    font-family: 'Open Sans';
-    min-width: 2rem;
-    font-size: 12px;
-    background: #ff0000;
-    color: rgb(255, 255, 255);
-    padding: 0 5px;
-    vertical-align: top;
-    margin-left: -10px; 
+.miaLand{
+  margin-bottom: 5rem;
 }
+.miaImage{
+  margin-top: 4rem;
+}*/
