@@ -6,14 +6,12 @@
     padding: 1rem;
     margin: 1rem;
     max-width: 400px;
-    height: 41rem;
     text-align: center;
     background-color: rgb(255, 255, 255);
     border: 1px solid rgb(5, 50, 87);
     border-radius: 10px;
 }
 .items div{
-    height: 28rem;
 }
 .items button{
     padding: 0.5rem;
