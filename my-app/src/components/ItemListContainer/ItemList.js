@@ -1,24 +1,11 @@
 //Componentes
-import ItemListContainer from "./ItemListContainer";
 import Item from "./Item";
-//JSON
-import PostData from "./data/productos";
-import React, { useState, useEffect } from "react";
 
-const ItemList = () => {
-  const [DataProds, setDataProds] = useState([]);
-  useEffect(()=>{
-    new Promise((resolve, reject) => {
-      setTimeout(() => {
-        setDataProds(PostData);
-        resolve(true);
-      }, 2000);
-    });
-  })
+const ItemList = ({products}) => {
   
   return (
     <section className="productos">
-      {DataProds.map((postDetail) => {
+      {products.map((postDetail) => {
         return (
           <div>
             <Item
@@ -28,6 +15,7 @@ const ItemList = () => {
               description={postDetail.description}
               stock={postDetail.stock}
               price={postDetail.price}
+              id={postDetail.id}
             />
           </div>
         );

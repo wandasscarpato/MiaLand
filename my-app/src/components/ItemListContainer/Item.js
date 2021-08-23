@@ -1,18 +1,18 @@
 import React from "react";
-import ItemCount from "../ItemCount/ItemCount"
+import {Link} from "react-router-dom";
 import "./ItemlistContainer.css";
 
-const Item = ({ title, image, description, price, stock}) => {
+const Item = ({id, title, image, description, price, stock}) => {
  
   return (
     <div className="items">
       <div>
         <h3>{title}</h3>
-        <img src={image} alt="img" />
-        <p>{description}</p>
+        <img className="imagenProd" src={image} alt="img" />
         <h2>${price}</h2>
+        <Link className="Ver" to={`/producto/${id}`}>Ver más</Link>
       </div>
-      <ItemCount stock={stock}/>
+      {/*<ItemCount stock={stock} initial="1" />*/}
     </div>
   );
 };

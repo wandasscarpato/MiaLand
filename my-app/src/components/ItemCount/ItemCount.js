@@ -1,8 +1,9 @@
 import React from 'react'
 import "./ItemCount.css";
-const ItemCount = ({stock}) => {
 
-    const[ItemCount, setItemCount] = React.useState(1);
+const ItemCount = ({stock, initial}) => {
+
+    const[ItemCount, setItemCount] = React.useState(Number(initial));
 
     const onAdd=()=>{
         setItemCount(ItemCount + 1);
