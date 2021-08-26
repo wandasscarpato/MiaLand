@@ -11,6 +11,8 @@ import Footer from "./components/Footer/Footer";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 
+import 'materialize-css/dist/css/materialize.min.css';
+
 class App extends React.Component {
   render() {
     return (
@@ -20,6 +22,7 @@ class App extends React.Component {
           <Switch>
             <Route path="/" exact component={ItemListContainer}></Route>
             <Route path="/producto/:id" exact component={ItemDetailContainer}></Route>
+            <Route path="/categoria/:id" exact component={ItemListContainer}></Route>
           </Switch>
           <Footer />
         </div>

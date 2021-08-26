@@ -8,13 +8,13 @@ html{
   font-family: 'Raleway', sans-serif;
   font-size: 1rem;
 }
-.Header{
-  background-color: #243444;
+.header nav{
+  background-color: #243444!important;
   text-align: center;
+  height: 85px!important;
 }
-.Header img{
+.HeaderLogo{
   width: 100px;
-  padding: 1rem;
 }
 .NavBar{
   background-color: #243444;

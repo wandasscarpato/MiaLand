@@ -5,6 +5,7 @@
         "description": "Pijama para perritos medianos, muy abrigado y suave",
         "price":1200,
         "stock":5,
+        "category":1,
         "Image":"https://m.media-amazon.com/images/I/61C-1V51OGL._AC_SX466_.jpg"
     },
     {
@@ -13,6 +14,7 @@
         "description": "Imposible más ridiculo",
         "price":1500,
         "stock":8,
+        "category":3,
         "Image":"https://http2.mlstatic.com/D_NQ_NP_659896-CBT44967956238_022021-O.jpg"
     },
     {
@@ -21,6 +23,7 @@
         "description": "Disfraz de navidad para gatos o perros pequeños",
         "price":1500,
         "stock":15,
+        "category":2,
         "Image":"https://ae01.alicdn.com/kf/H66f1aaba168d4f508050182fb093b417u/Disfraz-de-perro-gato-gracioso-manto-de-Navidad-Halloween-ropas-de-disfraz-para-gatos-traje-de.jpg_q50.jpg"
     },
     {
@@ -29,6 +32,7 @@
         "description": "abrigado",
         "price":2000,
         "stock":6,
+        "category":2,
         "Image":"https://ae01.alicdn.com/kf/H264d2fdb21cd4084906c2193606ad3bbe/Disfraz-de-dinosaurio-y-perro-de-Gato-ropa-c-lida-de-lana-para-cachorros-y-gatos.jpg_q50.jpg"
     },
     {
@@ -37,6 +41,7 @@
         "description": "Traje de reno con papa noel",
         "price":1200,
         "stock":9,
+        "category":3,
         "Image":"https://m.media-amazon.com/images/I/41Bsi0Y+0aL._SL500_.jpg"
     },
     {
@@ -45,6 +50,7 @@
         "description": "Gorrito reno para gatos, material suave y comodo",
         "price":700,
         "stock":10,
+        "category":2,
         "Image":"https://m.media-amazon.com/images/I/71LH9t8DwwL._AC_SX466_.jpg"
     },
     {
@@ -53,6 +59,7 @@
         "description": "apto gatos y perros pequeños",
         "price":700,
         "stock":10,
+        "category":3,
         "Image":"https://ae01.alicdn.com/kf/HTB1ZoUAXq67gK0jSZFHq6y9jVXaS/De-Gato-perro-trajes-volar-drag-n-perro-de-Halloween-traje-de-lana-caliente-perros-ropa.jpg_q50.jpg"
     }
 ]
