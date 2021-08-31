@@ -1,8 +1,8 @@
 import Logo from "./img/miaLand.png";
 import React, {useEffect} from "react";
 import M from "materialize-css";
-import "../CardWidget/CardWidget";
-import Cart from "../CardWidget/CardWidget";
+import "../CartWidget/CartWidget";
+import Cart from "../CartWidget/CartWidget";
 import {Link} from "react-router-dom";
 import Categorias from "./data/categorias";
 

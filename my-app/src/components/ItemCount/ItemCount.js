@@ -1,7 +1,7 @@
 import React from 'react'
 import "./ItemCount.css";
 
-const ItemCount = ({stock, initial}) => {
+const ItemCount = ({functionOnAdd, stock, initial}) => {
 
     const[ItemCount, setItemCount] = React.useState(Number(initial));
 
@@ -24,13 +24,17 @@ const ItemCount = ({stock, initial}) => {
         }
     }
     
+    const llamarFuncion=() =>{
+        functionOnAdd(ItemCount)
+    }
+
     return (
         <div className="btnCarrito">
             <button onClick={verificarStockDecre}>-</button> 
             <span>{ItemCount}</span>
             <button onClick={verificarStockAdd}>+</button> 
             <div>
-            <button>Agregar al carrito</button>
+            <button onClick={llamarFuncion}>Agregar al carrito</button>
             </div>
         </div>
     )
