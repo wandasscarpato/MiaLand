@@ -1,5 +1,4 @@
-.cart{
-    text-align: center;
-    color:red;
-    height:50vh
+.productoCarrito{
+    display: flex;
+    
 }

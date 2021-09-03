@@ -1,22 +1,20 @@
 import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import 'materialize-css/dist/css/materialize.min.css';
 //Components
-import "./components/Header/Header";
 import Header from "./components/Header/Header";
-
-import "./components/Footer/Footer";
 import Footer from "./components/Footer/Footer";
-
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
-import Cart from "./components/Cart/Cart"
-import 'materialize-css/dist/css/materialize.min.css';
+import Cart from "./components/Cart/Cart";
+import CustomProvider from "./context/CartContext";
 
 class App extends React.Component {
   render() {
     return (
       <Router>
+        <CustomProvider>
         <div>
           <Header />
           <Switch>
@@ -27,6 +25,7 @@ class App extends React.Component {
           </Switch>
           <Footer />
         </div>
+        </CustomProvider>
       </Router>
     );
   }
