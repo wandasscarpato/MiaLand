@@ -10,14 +10,15 @@ const CustomProvider = ({children}) => {
    
     const agregarProducto = (item) => {
         let existe=null;
-        existe=itemsCart.find(producto => item.item.id);
-        if(existe!==null){
+        existe=itemsCart.find(producto => producto.item.id === item.item.id);
+        console.log(existe)
+        if(existe===undefined){
             setItemsCart([...itemsCart, item])
         }
     else{
         itemsCart.forEach((items)=>{
-          if(items.id===item.item.id){
-            item.cantidad=items.cantidad+item.cantidad
+          if(items.item.id===item.item.id){
+            items.cantidad=items.cantidad+item.cantidad
             }
         })
     }

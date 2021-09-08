@@ -1,80 +1,61 @@
-*{
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  text-decoration: none;
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
 }
-html{
-  font-family: 'Raleway', sans-serif;
-  font-size: 1rem;
+html {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
 }
-.header nav{
-  background-color: #243444!important;
-  text-align: center;
-  height: 85px!important;
+.header {
+    text-align: center;
+    background-color: palevioletred;
+    padding-top: 1em;
 }
-.HeaderLogo{
-  width: 100px;
-}
-.NavBar{
-  background-color: #243444;
-  padding-bottom: 1rem;
-  line-height: 45px;
-  height: 75px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: baseline;
-}
-.NavBar ul{
-  display: flex;
-}
-.NavBar ul li{
-  padding: 1rem;
-}
-.NavBar ul li a{
-  color: white;
-}
-/*----------------------FIN HEADER-------------------*/
-.relleno{
-  height: calc(100vh - 200px - 198px);
+.HeaderLogo {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
 }
 /*----------------------FIN SECTION-------------------*/
-footer{
-  color: white;
-  /*height: 198px;*/}
-footer div:first-child{
-  text-align: center;
-  text-transform: uppercase;
-  background-color: #243444;
-  padding-top: 1rem;
+footer {
+    color: white;
+    /*height: 198px;*/
 }
-footer div ul{
-  display: flex;
-  justify-content: center;
+footer div:first-child {
+    text-align: center;
+    text-transform: uppercase;
+    background-color: palevioletred;
+    padding-top: 1rem;
 }
-footer div ul li a i{
-  font-size: 30px;
-  padding: 2rem;
-  color:white;
+footer div ul {
+    display: flex;
+    justify-content: center;
 }
-footer div div h3{
-  font-size: 2rem;
+footer div ul li a i {
+    font-size: 30px;
+    padding: 2rem;
+    color: white;
 }
-.footerDerechos{
-  background-color: #1d2e3f;
-  padding: 1rem;
-  text-align: center;
+footer div div h3 {
+    font-size: 2rem;
 }
-i.fas.fa-cart-plus{
-  height: 100%;
+.footerDerechos {
+    background-color: rgb(224, 79, 128);
+    padding: 1rem;
+    text-align: center;
+}
+i.fas.fa-cart-plus {
+    height: 100%;
 }
 /*----------------------FIN FOOTER-------------------*/
 /*----------------------Card Productos-------------------*/
-.productos{
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  align-items: baseline;
+.productos {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: baseline;
 }
 
 /*----------------------fin Card Productos-------------------*/

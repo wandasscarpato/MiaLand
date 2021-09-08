@@ -1,0 +1,9 @@
+.headerCart{
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-evenly;
+}
+.headerCart span{
+    width: 150px;
+    text-align: center;
+}

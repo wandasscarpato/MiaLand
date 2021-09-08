@@ -1,6 +1,6 @@
-const card = () =>{
+const card = ({number}) =>{
     return (
-        <li><a href="./carrito.html"><i className="fas fa-cart-plus"></i></a></li>
+    <i className="fas fa-cart-plus">{number}</i>
     )
 }
 export default card;

@@ -1,4 +1,23 @@
-.productoCarrito{
+.productoCarrito {
     display: flex;
-    
+    border: 1px solid purple;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 2em 6em;
+    padding: 2em;
+}
+.productoCarrito img {
+    height: 100px;
+    background-color: aquamarine;
+}
+.divButton{
+    text-align: center;
+    margin: 2em;
+}
+@media (max-width: 730px){
+    .productoCarrito {
+        display: grid;
+        text-align: center;
+    }
 }

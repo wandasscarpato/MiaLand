@@ -1,0 +1,8 @@
+@import 'componentes';
+@import './colores';
+.buttonPrimary{
+    @extend #btn;
+ }
+ .buttonSecundary{
+     @extend #btn2;
+ }
