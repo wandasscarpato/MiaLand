@@ -9,7 +9,6 @@ import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailCont
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import Cart from "./components/Cart/Cart";
 import CustomProvider from "./context/CartContext";
-
 class App extends React.Component {
   render() {
     return (

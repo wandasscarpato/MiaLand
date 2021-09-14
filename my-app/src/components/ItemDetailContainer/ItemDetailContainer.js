@@ -1,16 +1,19 @@
-import { useState, useEffect }  from "react";
-import ItemDetail from "./ItemDetail"
-import Spinner from "../Spinner/Spinner"
+import { useState, useEffect,useCallback } from "react";
+import ItemDetail from "./ItemDetail";
+import Spinner from "../Spinner/Spinner";
 //JSON
-import PostData from "../ItemListContainer/data/productos";
+import { db } from "../../firebase";
+import { getDoc, doc } from "firebase/firestore";
+const ItemDetailContainer = ({ match }) => {
+  const [DataProds, setDataProds] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
 
-const ItemDetailContainer = ({match}) => {
-    const [DataProds, setDataProds] = useState({});
-    const [isLoading, setIsLoading] = useState(true);
-
-    useEffect(() => {
-      new Promise((resolve, reject) => {
-        setTimeout(()=>{
+  const getProducts = async () => {
+    let id=match.params.id
+    const dataProduct= await getDoc(doc(db,'products',id));
+    setDataProds({id:id, ...dataProduct.data()})
+  }
+/*  setTimeout(()=>{
           PostData.map((postDetail) => {
               if(+postDetail.id===+match.params.id){
                 return setDataProds(postDetail)
@@ -20,15 +23,11 @@ const ItemDetailContainer = ({match}) => {
           })
           resolve(true);
           setIsLoading(false);
-        },2000)
-      })
-    }); 
-  return (
-    <>
-    {isLoading ? <Spinner/> : <ItemDetail item={DataProds}/>}  
-    </>
-    
-  );
+        },2000) */
+  useEffect(() => {
+    getProducts();
+    setIsLoading(false);
+  },[]);
+  return <>{isLoading ? <Spinner /> : <ItemDetail item={DataProds} />}</>;
 };
 export default ItemDetailContainer;
-

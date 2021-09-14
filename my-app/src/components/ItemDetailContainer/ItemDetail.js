@@ -16,7 +16,7 @@ import "./ItemDetail.css"
   return (
     <div className="items itemsDetail">
       <div>
-      <img src={item.Image} alt="img" />
+      <img src={item.image} alt="img" />
       </div>
       <div>
         <h3>{item.title}</h3>

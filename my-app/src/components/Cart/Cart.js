@@ -28,8 +28,8 @@ const Cart = () => {
       {itemsCart.map((productosCarrito) => {
         return (
           <>
-            <div className="productoCarrito">
-              <img src={productosCarrito.item.Image} alt="imagen prod" />
+            <div key={productosCarrito.item.id} className="productoCarrito">
+              <img src={productosCarrito.item.image} alt="imagen prod" />
               <span>{productosCarrito.item.title}</span>
               <span>{productosCarrito.cantidad}</span>
               <span>${productosCarrito.item.price}</span>

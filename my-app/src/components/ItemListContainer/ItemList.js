@@ -2,7 +2,7 @@
 import Item from "./Item";
 
 const ItemList = ({products}) => {
-  
+  console.log(products.id)
   return (
     <section className="productos">
       {products.map((postDetail) => {
@@ -11,7 +11,7 @@ const ItemList = ({products}) => {
             <Item
               key={postDetail.id}
               title={postDetail.title}
-              image={postDetail.Image}
+              image={postDetail.image}
               description={postDetail.description}
               stock={postDetail.stock}
               price={postDetail.price}

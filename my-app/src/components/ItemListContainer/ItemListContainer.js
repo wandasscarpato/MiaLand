@@ -2,14 +2,30 @@ import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 import "./ItemlistContainer.css";
 import Spinner from "../Spinner/Spinner";
-//JSON
-import PostData from "./data/productos";
+import {db} from "../../firebase";
+import{
+  collection,
+  query,
+  getDocs,
+} from "firebase/firestore"
 
 const ItemListContainer = ({ match }) => {
   const [DataProds, setDataProds] = useState([]);
+  console.log(DataProds)
   const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
-    new Promise((resolve, reject) => {
+    const getProducts = async() =>{
+      const docs = []
+      const queryProducts = query(collection(db, "products"));
+      const querySnapshot = await getDocs(queryProducts);
+      querySnapshot.forEach((doc)=>{
+        docs.push({...doc.data(), id:doc.id})
+      })
+      setDataProds(docs);
+    };
+ /*  
+   useEffect(() => {
+
+ new Promise((resolve, reject) => {
       let array = [];
       setTimeout(() => {
         if (match.params.id === undefined) {
@@ -26,7 +42,12 @@ const ItemListContainer = ({ match }) => {
         setIsLoading(false);
       }, 1500);
     });
-  }, [match.params.id]);
+  }, [match.params.id]);*/
+
+  useEffect(()=>{
+    getProducts()
+    setIsLoading(false);
+  },[]);
 
   return <>{isLoading ? <Spinner /> : <ItemList products={DataProds} />}</>;
 };
