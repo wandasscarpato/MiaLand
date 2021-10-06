@@ -1,0 +1,36 @@
+.central{
+    display: flex;
+    justify-content: center;
+}
+.form{
+    display: grid;
+    width: 20%;
+    justify-content: center;
+    margin: 10em 0;
+    padding: 2em;
+    border: 1px solid rgb(175, 104, 182);
+    border-radius: 20px;
+}
+.form input{
+    margin:5px;
+}
+
+.btn-enviar{
+    height: 45px;
+    border-radius: 20px;
+    border:1px solid pink;
+    background-color: rgb(175, 104, 182);
+    color:white;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+@media (max-width: 1300px){
+    .form{
+        width: 40%;
+    }
+}
+@media (max-width: 600px){
+    .form{
+        width: 60%;
+    }
+}

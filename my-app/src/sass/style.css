@@ -1,7 +1,14 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
 #btn, .buttonPrimary {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: rgba(136, 9, 136, 0.644);
+  background-color: #e79ab4;
   padding: 5px 10px;
   border: none;
   width: 120px;
@@ -12,11 +19,231 @@
 #btn2, .buttonSecundary {
   color: purple;
   font-family: Arial, Helvetica, sans-serif;
-  border: rgba(136, 9, 136, 0.644) solid 1px;
+  border: #e79ab4 solid 1px;
   background-color: white;
   padding: 10px 5px;
   width: 100px;
   height: 50px;
   border-radius: 10px;
+}
+
+.imagenProd {
+  height: 250px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2em 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.imagenProd:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.title {
+  font-size: 30px;
+  height: 100px;
+  background: #e79ab4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  color: white;
+}
+
+.title .detalle {
+  font-size: 2em;
+}
+
+.precio {
+  font-size: 30px;
+  color: #e79ab4;
+  padding: 0.2em;
+  background-color: rgba(199, 103, 103, 0.178);
+}
+
+.ver {
+  padding: 0.5em 1em;
+  background-color: #e79ab4;
+  color: white;
+}
+
+.precio:hover {
+  color: #d4648a;
+  cursor: default;
+}
+
+.ver:hover {
+  color: #d4648a;
+  background-color: rgba(199, 103, 103, 0.178);
+  border: 1px #d4648a solid;
+}
+
+.items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid rgba(199, 103, 103, 0.178);
+  margin: 2em 1em;
+  width: 400px;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.itemsDetail {
+  width: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  margin: 0 auto;
+}
+
+.itemsDetail img {
+  max-height: 400px;
+  margin: 2em 0;
+}
+
+.items button {
+  padding: 0.5rem;
+  background-color: rgba(199, 103, 103, 0.178);
+  color: #d4648a;
+  border: none;
+  border-radius: 10px;
+}
+
+.descripcion {
+  background-color: rgba(199, 103, 103, 0.178);
+  padding: 0.5rem;
+  text-align: center;
+  margin: 1em 0;
+}
+
+.items button:hover {
+  background-color: #d4648a;
+  color: white;
+  border: none;
+}
+
+.items div {
+  width: 100%;
+  height: 500px;
+}
+
+html {
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+}
+
+.header {
+  text-align: center;
+  background-color: palevioletred;
+  padding-top: 1em;
+}
+
+.HeaderLogo {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+}
+
+/*----------------------FIN SECTION-------------------*/
+footer {
+  color: white;
+  position: absolute;
+  width: 100%;
+  /*height: 198px;*/
+}
+
+footer div:first-child {
+  text-align: center;
+  text-transform: uppercase;
+  background-color: palevioletred;
+  padding-top: 0.5rem;
+}
+
+footer div ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer div ul li a i {
+  font-size: 30px;
+  padding: 2rem;
+  color: white;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+footer div ul li a i:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+footer div div h3 {
+  font-size: 2rem;
+}
+
+.footerDerechos {
+  background-color: #e04f80;
+  padding: 1rem;
+  text-align: center;
+}
+
+i.fas.fa-cart-plus {
+  height: 100%;
+}
+
+/*----------------------FIN FOOTER-------------------*/
+/*----------------------Card Productos-------------------*/
+.productos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+@media (max-width: 800px) {
+  .itemsDetail {
+    display: -ms-grid;
+    display: grid;
+    margin: auto;
+  }
+  .items {
+    height: auto;
+  }
+}
+
+.sinProductos {
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=style.css.map */

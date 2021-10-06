@@ -11,7 +11,6 @@ const CustomProvider = ({children}) => {
     const agregarProducto = (item) => {
         let existe=null;
         existe=itemsCart.find(producto => producto.item.id === item.item.id);
-        console.log(existe)
         if(existe===undefined){
             setItemsCart([...itemsCart, item])
         }
@@ -23,10 +22,9 @@ const CustomProvider = ({children}) => {
         })
     }
     }
-    const eliminarSeleccionado = (evt) => {
-        const producto = itemsCart.filter(prod=>prod.item.id !== +evt.currentTarget.value);
-        setItemsCart(producto);
-    }
+    const eliminarSeleccionado = ((evt) => {
+        setItemsCart(itemsCart.filter(prod=>prod.item.id !== +evt.currentTarget.value));
+    })
     return (
         <CartContext.Provider value={[itemsCart, eliminarSeleccionado, agregarProducto, eliminarTodo]}>
             {children}

@@ -21,7 +21,7 @@ const Cart = () => {
 
   useEffect(() => {
     calcularImporteTotal();
-  });
+  },[CartContext]);
 
   return (
     <>
@@ -48,9 +48,14 @@ const Cart = () => {
         {itemsCart.length ? (
           <div>
             <h3>Importe total ${importeTotal}</h3>
+            <div className="alinear">
             <button className="buttonPrimary" onClick={eliminarTodo}>
               Elminar todo
             </button>
+            <Link to="/form" importeTotal={importeTotal} productos={itemsCart}> <button className="buttonPrimary btnn">
+              Finalizar compra
+            </button></Link>
+            </div>
           </div>
         ) : (
           <Link to="/">Volver al inicio</Link>

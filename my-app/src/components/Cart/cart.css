@@ -21,3 +21,12 @@
         text-align: center;
     }
 }
+.alinear{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btnn{
+    background-color: rgb(40, 146, 40);
+    margin: 0 10px
+}

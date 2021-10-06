@@ -1,33 +1,22 @@
-import { useState, useEffect,useCallback } from "react";
+import { useState, useEffect, useCallback } from "react";
 import ItemDetail from "./ItemDetail";
 import Spinner from "../Spinner/Spinner";
-//JSON
 import { db } from "../../firebase";
 import { getDoc, doc } from "firebase/firestore";
+import "../../sass/style.css";
+
 const ItemDetailContainer = ({ match }) => {
   const [DataProds, setDataProds] = useState({});
-  const [isLoading, setIsLoading] = useState(true);
 
-  const getProducts = async () => {
-    let id=match.params.id
-    const dataProduct= await getDoc(doc(db,'products',id));
-    setDataProds({id:id, ...dataProduct.data()})
-  }
-/*  setTimeout(()=>{
-          PostData.map((postDetail) => {
-              if(+postDetail.id===+match.params.id){
-                return setDataProds(postDetail)
-              }else{
-                return 0;
-              }
-          })
-          resolve(true);
-          setIsLoading(false);
-        },2000) */
+  const id = match.params.id;
+
+  const getProducts = async (id) => {
+    const dataProduct = await getDoc(doc(db, "products", id));
+    setDataProds({ id: id, ...dataProduct.data() });
+  };
   useEffect(() => {
-    getProducts();
-    setIsLoading(false);
-  },[]);
-  return <>{isLoading ? <Spinner /> : <ItemDetail item={DataProds} />}</>;
+    getProducts(id);
+  }, [id]);
+  return <>{DataProds.stock===undefined ? <h1 className="sinProductos">Producto no existe</h1> : <ItemDetail item={DataProds} />}</>;
 };
 export default ItemDetailContainer;

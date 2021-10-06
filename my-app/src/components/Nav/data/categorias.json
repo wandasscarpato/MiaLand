@@ -1,12 +1,12 @@
 [
     {
         "id":1,
-        "nombre":"Pijama"
+        "nombre":"Juguetes"
     },{
         "id":2,
-        "nombre":"Ropita"
+        "nombre":"Pijama"
     },{
         "id":3,
-        "nombre":"Disfraces"
+        "nombre":"Ropita"
     }
 ]
