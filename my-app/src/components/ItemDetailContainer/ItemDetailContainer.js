@@ -1,6 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
 import ItemDetail from "./ItemDetail";
-import Spinner from "../Spinner/Spinner";
 import { db } from "../../firebase";
 import { getDoc, doc } from "firebase/firestore";
 import "../../sass/style.css";
@@ -17,6 +16,14 @@ const ItemDetailContainer = ({ match }) => {
   useEffect(() => {
     getProducts(id);
   }, [id]);
-  return <>{DataProds.stock===undefined ? <h1 className="sinProductos">Producto no existe</h1> : <ItemDetail item={DataProds} />}</>;
+  return (
+    <>
+      {DataProds.stock === undefined ? (
+        <h1 className="sinProductos">Producto no existe</h1>
+      ) : (
+        <ItemDetail item={DataProds} />
+      )}
+    </>
+  );
 };
 export default ItemDetailContainer;

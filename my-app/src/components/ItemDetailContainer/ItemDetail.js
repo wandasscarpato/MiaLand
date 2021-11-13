@@ -5,7 +5,7 @@ import { CartContext } from "../../context/CartContext";
 import "../../sass/style.css";
 
 const ItemDetail = ({ item }) => {
-  const [itemsCart, , agregarProducto] = useContext(CartContext);
+  const [, , , agregarProducto] = useContext(CartContext);
   const [number, setNumber] = useState(0);
 
   const onAdd = (cantidad) => {

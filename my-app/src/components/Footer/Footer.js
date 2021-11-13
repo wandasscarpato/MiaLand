@@ -1,26 +1,26 @@
-const Footer = () =>{
-    return (
-    <footer> 
+const Footer = () => {
+  return (
+    <footer>
+      <div>
         <div>
-        <div>
-            <h3>Seguinos en</h3>
-            <ul>
-                <li>
-                    <a><i className="fab fa-facebook"></i></a>
-                </li>
-                <li>
-                    <a><i className="fab fa-instagram"></i></a>
-                </li>
-                <li>
-                    <a><i className="fab fa-pinterest"></i></a>
-                </li>
-            </ul>
+          <h3>Seguinos en</h3>
+          <ul>
+            <li>
+              <i className="fab fa-facebook"></i>
+            </li>
+            <li>
+              <i className="fab fa-instagram"></i>
+            </li>
+            <li>
+              <i className="fab fa-pinterest"></i>
+            </li>
+          </ul>
         </div>
-        </div>
-        <div className="footerDerechos">
-         ©2021 Mia Land. Todos los derechos reservados.
-        </div>
+      </div>
+      <div className="footerDerechos">
+        ©2021 Mia Land. Todos los derechos reservados.
+      </div>
     </footer>
-    )
-}
+  );
+};
 export default Footer;

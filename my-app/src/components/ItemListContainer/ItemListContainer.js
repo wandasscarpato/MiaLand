@@ -1,13 +1,12 @@
 import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 import "../../sass/style.css";
-import Spinner from "../Spinner/Spinner";
 import { db } from "../../firebase";
 import { collection, query, where, getDocs } from "firebase/firestore";
 
 const ItemListContainer = ({ match }) => {
   const [DataProds, setDataProds] = useState([]);
-  const id=match.params.id;
+  const id = match.params.id;
   const getProducts = async (id) => {
     const docs = [];
     let queryProducts;
@@ -29,7 +28,15 @@ const ItemListContainer = ({ match }) => {
 
   useEffect(() => {
     getProducts(id);
-  },[id]);
-  return <>{DataProds.length<1 ? <h1 className="sinProductos">No hay productos de esta categoria</h1> : <ItemList products={DataProds} />}</>;
+  }, [id]);
+  return (
+    <>
+      {DataProds.length < 1 ? (
+        <h1 className="sinProductos">No hay productos de esta categoria</h1>
+      ) : (
+        <ItemList products={DataProds} />
+      )}
+    </>
+  );
 };
 export default ItemListContainer;

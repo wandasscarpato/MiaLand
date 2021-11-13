@@ -1,37 +1,39 @@
-import React, { useEffect, useContext} from "react";
+import React, { useContext } from "react";
 import "./Form.css";
-import { collection, addDoc, getDoc, doc, updateDoc } from "firebase/firestore";
+import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../firebase";
 import { CartContext } from "../../context/CartContext";
-import swal from 'sweetalert';
+import swal from "sweetalert";
 
-const Form = ({importeTotal, productos}) => {
-  const [itemsCart, eliminarSeleccionado, , eliminarTodo] = useContext(
-    CartContext
-  );  
+const Form = ({ importeTotal, productos }) => {
+  const [itemsCart, , ,] = useContext(CartContext);
   const terminarCompra = async (e) => {
     e.preventDefault();
-    const usuario={
-      "nombre":e.target[0].value,
-      "telefono":e.target[1].value,
-      "email":e.target[2].value
-    }
-    let productosComprados=[];
-    
-    itemsCart.map((producto)=>
-      productosComprados=[...productosComprados,{
-        "nombre":producto.item.title,
-      "cantidad":producto.cantidad,
-      "precio":producto.item.price,
-      }]
-    )
+    const usuario = {
+      nombre: e.target[0].value,
+      telefono: e.target[1].value,
+      email: e.target[2].value,
+    };
+    let productosComprados = [];
+
+    itemsCart.map(
+      (producto) =>
+        (productosComprados = [
+          ...productosComprados,
+          {
+            nombre: producto.item.title,
+            cantidad: producto.cantidad,
+            precio: producto.item.price,
+          },
+        ])
+    );
     const docRef = await addDoc(collection(db, "orders"), {
-      'usuario': usuario,
-      'product': productosComprados,
+      usuario: usuario,
+      product: productosComprados,
       /*date: today,
       total: total,*/
     });
-   swal("Compra exitosa!", `id de compra:${docRef.id}`, "success");
+    swal("Compra exitosa!", `id de compra:${docRef.id}`, "success");
   };
   return (
     <div className="central">

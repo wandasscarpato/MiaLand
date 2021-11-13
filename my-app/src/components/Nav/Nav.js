@@ -7,17 +7,19 @@ import { CartContext } from "../../context/CartContext";
 
 export const Nav = () => {
   const [itemsCart] = useContext(CartContext);
-  const [cantidadItems, setCantidadItems]=useState(0);
+  const [cantidadItems, setCantidadItems] = useState(0);
 
-  const recorrerItemsCart = () =>{
+  const recorrerItemsCart = () => {
     let cantidad = 0;
-    itemsCart.forEach(item=>{ cantidad=cantidad+item.cantidad })
-    setCantidadItems(cantidad)
-  }
+    itemsCart.forEach((item) => {
+      cantidad = cantidad + item.cantidad;
+    });
+    setCantidadItems(cantidad);
+  };
 
-  useEffect(()=>{
-    recorrerItemsCart()
-  })
+  useEffect(() => {
+    recorrerItemsCart();
+  });
 
   return (
     <div>
@@ -41,7 +43,7 @@ export const Nav = () => {
           <li>
             {itemsCart.length !== 0 ? (
               <Link to={`/carrito`}>
-                <Cart number={cantidadItems}/>
+                <Cart number={cantidadItems} />
               </Link>
             ) : (
               <></>

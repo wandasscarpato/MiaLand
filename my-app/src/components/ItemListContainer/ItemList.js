@@ -1,8 +1,8 @@
 //Componentes
 import Item from "./Item";
 
-const ItemList = ({products}) => {
-  console.log(products.id)
+const ItemList = ({ products }) => {
+  console.log(products.id);
   return (
     <section className="productos">
       {products.map((postDetail) => {
