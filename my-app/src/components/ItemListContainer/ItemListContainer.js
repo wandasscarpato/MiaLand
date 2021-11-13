@@ -28,7 +28,9 @@ const ItemListContainer = ({ match }) => {
 
   useEffect(() => {
     getProducts(id);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
+  
   return (
     <>
       {DataProds.length < 1 ? (

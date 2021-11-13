@@ -21,6 +21,7 @@ const Cart = () => {
 
   useEffect(() => {
     calcularImporteTotal();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [CartContext]);
 
   return (
